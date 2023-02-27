@@ -1,0 +1,32 @@
+
+ Để nâng cao tính tích cực cho nhân viên, công ty tổ chức đánh giá xếp loại thi đua cho nhân viên hàng tháng (loại A, B, C, D). Xếp loại này sẽ quyết định thu nhập của mỗi nhân viên như sau:
+- Nếu xếp loại A: nhân viên được hưởng 100% Lương + phụ cấp thâm niên
+- Nếu xếp loại B: nhân viên được hưởng 75% Lương + phụ cấp thâm niên
+- Nếu xếp loại C: nhân viên được hưởng 50% Lương + phụ cấp thâm niên
+- Nếu xếp loại D: nhân viên được hưởng 0% mức lương + phụ cấp thâm niên
+Biết rằng phụ cấp thâm niên chỉ áp dụng cho các nhân viên có thời gian làm việc từ 5 năm trở lên và được tính như sau: phụ cấp thâm niên = số năm làm việc * lương cơ bản/100. Lương cơ bản dùng chung cho tất cả nhân viên là 1490.
+Do tính chất công việc nên mỗi nhân viên lại có những đặc điểm, cách xếp loại, cách tính lương và phụ cấp khác nhau như sau:
+- Nhân viên sản xuất: do làm việc trong môi trường khắc nghiệt nên nhân viên sản xuất đều được hưởng một hệ số phụ cấp nặng nhọc. Hệ số này là chung cho tất cả các nhân viên sản xuất của công ty và đang được công ty qui định là 10%. Mỗi nhân viên sẽ có thông tin về số ngày nghỉ trong một tháng và xếp loại thi đua được tính như sau:
+§ Nếu số ngày nghỉ <= 1 thì xếp loại A, số ngày nghỉ <= 3 thì xếp
+loại B, số ngày nghỉ <= 5 thì xếp loại C còn lại là xếp loại D.
+§ Lương của nhân viên sản xuất được tính theo công thức như sau:
+Lương = hệ số lương * lương cơ bản * (1+ phụ cấp nặng nhọc)
+- Nhân viên kinh doanh: công ty không bắt buộc nhân viên kinh doanh phải làm việc theo ngày giống như nhân viên sản xuất mà chỉ quan tâm tới năng lực bán hàng của từng người. Mỗi nhân viên kinh doanh có một doanh số bán hàng tối thiểu khác nhau và một thông tin về doanh số bán hàng theo tháng.
+§ Nếu nhân viên hoàn thành doanh số tối thiểu thì xếp loại thi đua là B, nếu không hoàn thành thì xếp loại C. Nếu doanh số nhỏ hơn 50% doanh số tối thiểu thì xếp loại D. Ngược lại nếu có danh số cao hơn 2.0 lần doanh số tối thiểu thì xếp loại A.
+§ Lương của nhân viên kinh doanh cũng được xác định như sau:
+Lương = hệ số lương * lương cơ bản + hoa hồng.
+Trong đó hoa hồng là 15% của doanh thu (doanh thu = doanh số vượt mức * 500).
+- Cán bộ quản lý: có trách nhiệm quản lý toàn bộ hoạt động sản xuất của công ty. Cán bộ quản lý có thêm thông tin về chức vụ và hệ số chức vụ.
+§ Xếp loại thi đua của cán bộ quản lý luôn luôn là A.
+§ Lương của cán bộ quản lý được xác định như sau:
+Lương = hệ số lương * lương cơ bản + phụ cấp chức vụ.
+Trong đó phụ cấp chức vụ = hệ số phụ cấp chức vụ * 1100.
+Để có thể tham gia đánh giá của tổng công ty, công ty ABC coi các nhân viên có xếp loại thi đua loại A thì danh hiệu thi đua là chiến sĩ thi đua, loại B là lao động tiên tiến.
+Đối với công ty BCD, nhân viên chỉ cần các thông tin về mã nhân viên, tên nhân viên. Công ty BCD không có xếp loại thi đua hàng tháng và lương chỉ tính bằng 15% của tổng số tiền mà nhân viên đó tạo ra trong một tháng mà thôi. Công ty BCD sẽ xem các nhân viên có lương trên 10000 là lao động tiên tiến và trên 20000 là chiến sĩ thi đua.
+Tổng công ty T có tổ chức đánh giá các nhân viên trong các công ty thành viên. Muốn một nhân viên được đánh giá là “Có năng lực ” hay “Năng lực tốt” thì tổng công ty chỉ quan tâm tới là mỗi nhân viên ở trong các công ty con có phải là chiến sĩ thi đua (nghĩa là có ‘năng lực tốt”) hay lao động tiên tiến (nghĩa là “Có năng lực”) hay không mà thôi, không quan tâm tới công ty con đánh giá vấn đề đó dựa vào tiêu chí nào.
+Giả sử bạn đang làm trong tổng công ty. Hãy tạo danh sách chứa nhân viên của 2 công ty và thực hiện các yêu cầu sau:
+-Nhập dữ liệu hoặc đọc file
+- Đếm số nhân viên của mỗi công ty con.
+- Cho biết tổng công ty T có bao nhiêu nhân viên có “Năng lực tốt”.
+- Xuất thông tin các nhân viên chưa được xét thi đua ở công ty BCD.
+- Xuất thông tin các nhân viên lao động tiên tiến của công ty ABC.
